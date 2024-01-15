@@ -32,45 +32,77 @@ class UpdateLocationForm(FlaskForm):
     submit = SubmitField("Update")
 
 class UpdateSummaryForm(FlaskForm):
+    summary = TextAreaField('Summary', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateProgrammingLanguages(FlaskForm):
+    p_language = StringField("Programming Language", validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateFrameworkForm(FlaskForm):
+    framework = StringField("Framework", validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateSoftTechForm(FlaskForm):
+    soft_tech = StringField("Software/Technology", validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateCompetenciesForm(FlaskForm):
+    competency = StringField("Competency", validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateSoftSkillsForm(FlaskForm):
+    soft_skills = StringField('Soft Skill', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdadeRelevantExperienceForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()])
+    company = StringField('Company', validators=[DataRequired()])
+    tenure = StringField('Tenure', validators=[DataRequired()])
+    location = StringField('Location', validators=[DataRequired()])
+    description = TextAreaField('Description', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateTempExperienceForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()])
+    company = StringField('Company', validators=[DataRequired()])
+    tenure = StringField('Tenure', validators=[DataRequired()])
+    location = StringField('Location', validators=[DataRequired()])
+    description = TextAreaField('Description', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateOtherExperienceForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()])
+    company = StringField('Company', validators=[DataRequired()])
+    tenure = StringField('Tenure', validators=[DataRequired()])
+    location = StringField('Location', validators=[DataRequired()])
+    description = TextAreaField('Description', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateDegreeProgramsForm(FlaskForm):
+    school = StringField('School', validators=[DataRequired()])
+    type = StringField('Type', validators=[DataRequired()])
+    field = StringField('Field', validators=[DataRequired()])
+    period = StringField('Period', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateCertificateProgramsForm(FlaskForm):
+    school = StringField('School', validators=[DataRequired()])
+    type = StringField('Type', validators=[DataRequired()])
+    field = StringField('Field', validators=[DataRequired()])
+    period = StringField('Period', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateLinksForm(FlaskForm):
+    link = StringField('Link', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdateCertificatesForm(FlaskForm):
+    cert = StringField('Certification', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 class UpdatePortfolioForm(FlaskForm):
+    p_item = StringField('Portfolio Item', validators=[DataRequired()])
     submit = SubmitField("Update")
 
 
