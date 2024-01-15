@@ -1,0 +1,309 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main>
+        <div id="page_top">
+            <h1>Ryan Giannamore</h1>
+            <img src="{{ url_for('static', filename='images/Professional_photo.png') }}">
+            <p>
+                Part Librarian | Project Analyst | Programmer<br>
+                Phone: +1 443-457-0231<br>
+                Email: houzidalao91@gmail.com<br>
+                Location: Baltimore, MD 21206<br>
+            </p>
+        </div>
+        <div id="accordion">
+            <h2>Summary</h2>
+            <div>
+                <p>Trained in multiple programming competencies including Desktop App Developement, Web Developement, and Mobile developement. Fully proficient in HTML/CSS, Python, JavaScript, and Java and have a basic understanding of several others. Constructed a quality control and performance analysis app in python that is currently being used for business. Completed an internship with Ansys's Sherlock Developement team, creating 13 new python APIs for the Sherlock Software. Currently pursuing Junior Engineering opportunities.</p>
+            </div>
+            <h2>Skills</h2>
+            <div>
+                <div id="nested-skills">
+                    <h3>Programming Languages</h3>
+                    <div>
+                        <ul id="languages">
+                            {% for language in items["skills"][0]["languages"] %}
+                                <li>{{ language }}</li>
+                            {% endfor %}
+                            <!-- <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bash</li>
+                            <li>Kotlin</li>
+                            <li>SQLite</li>
+                            <li>XML</li>
+                            <li>Some C</li>
+                            <li>Some C++</li> -->
+                        </ul>
+                        <a>Add items</a>
+                    </div>
+                    <h3>Frameworks</h3>
+                    <div>
+                        <ul id="frameworks">
+                            {% for framework in items["skills"][0]["frameworks"] %}
+                                <li>{{ framework }}</li>
+                            {% endfor %}                                
+                            <!-- <li>Pandas</li>
+                            <li>Tkinter</li>
+                            <li>Swing</li>
+                            <li>jQuery</li>
+                            <li>Flask</li>
+                            <li>Bootstrap</li>
+                            <li>Android</li>
+                            <li>gRPC</li> -->
+                        </ul>
+                        <a>Add items</a>
+                    </div>
+                    <h3>Software/Technologies</h3>
+                    <div>
+                        <ul id="softwareTech">
+                            {% for softTech in items["skills"][0]["softwareTech"] %}
+                                <li>{{ softTech }}</li>
+                            {% endfor %}                                
+                            <!-- <li>Linux Command Line</li>
+                            <li>Windows Command Line</li>
+                            <li>Github</li>
+                            <li>Microsoft Word</li>
+                            <li>Microsoft Excel</li>
+                            <li>Microsoft Powerpoint</li>
+                            <li>Microsoft Teams</li>
+                            <li>Microsoft Outlook</li>
+                            <li>Microsoft Project</li>
+                            <li>Visual Studio Code</li>
+                            <li>PyCharm</li>
+                            <li>Eclipse</li>
+                            <li>Cygwin</li>
+                            <li>Android Studio</li>
+                            <li>Vim Editor</li>
+                            <li>Source Tree</li>
+                            <li>Sherlock</li> -->
+                        </ul>
+                        <a>Add items</a>
+                    </div>
+                    <h3>Competencies</h3>
+                    <div>
+                        <ul id="competencies">
+                            {% for competency in items["skills"][0]["competencies"] %}
+                                <li>{{ competency }}</li>
+                            {% endfor %}                                
+                            <!-- <li>API Developement</li>
+                            <li>API Testing</li>
+                            <li>Object Oriented Programming</li>
+                            <li>Gui Programming</li>
+                            <li>Version Control</li>
+                            <li>Project Management</li>
+                            <li>Agile Project Management</li>
+                            <li>Quality Control</li>
+                            <li>Unit Testing</li>
+                            <li>Web Developement</li>
+                            <li>Mobile Developement</li>
+                            <li>Desktop App Developement</li>
+                            <li>Scripting</li> -->
+                        </ul>
+                        <a>Add items</a>
+                    </div>
+                    <h3>Soft Skills</h3>
+                    <div>
+                        <ul id="Soft">
+                            {% for soft in items["skills"][0]["Soft"] %}
+                                <li>{{ soft }}</li>
+                            {% endfor %}                                
+                            <!-- <li>Mandarin Chinese</li>
+                            <li>Communication</li>
+                            <li>Leadership</li>
+                            <li>Attention to Detail</li>
+                            <li>Public Speaking</li> -->
+                        </ul>
+                        <a>Add items</a>
+                    </div>
+                </div>
+
+            </div>
+            <h2>Relevant Work Experience</h2>
+            <div>
+                <ul id="relevant">
+                    <!-- {% for item in items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}                        -->
+                    <!-- <li>
+                        <p class="job-title">Part Librarian/Project Analyst</p>
+                        <p class="company">Ansys</p>
+                        <p class="tenure">December 2020-Present</p>
+                        <p class="location">Remote</p>
+                        <a href="PartLibrarian.html">Detailed Description</a>
+
+                    </li>
+                    <li>
+                        <p class="job-title">Software Engineering Internship</p>
+                        <p class="company">Ansys</p>
+                        <p class="tenure">March 2023-June 2023</p>
+                        <p class="location">Remote</p>
+                        <a href="ProgrammingInternship.html">Detailed Description</a>
+                    </li>
+                    <li>
+                        <p class="job-title">Office Clerk/Workflow Coordinator</p>
+                        <p class="company">BeneSys</p>
+                        <p class="tenure">September 2018 - February 2020</p>
+                        <p class="location">Columbia, MD</p>
+                        <a href="OfficeClerk.html">Detailed Description</a>
+                    </li> -->
+                </ul>
+                <a>Add items</a>
+            </div>
+            <h2>Other Work Experience</h2>
+            <div>
+                <div id="nested-Other-work">
+                    <h3>Temp Work Experience</h3>
+                    <div>
+                        <ul id="temp">
+                            <!-- {% for item in items %}
+                                <li>{{ item }}</li>
+                            {% endfor %}                                  -->
+                            <!--<li>
+                                <p class="job-title">Temporary Data Entry Clerk</p>
+                                <p class="company">Southern Glazer's Wine & Spirits</p>
+                                <p class="tenure">October 2020 - November 2020</p>
+                                <p class="location">Remote</p>
+                                <p>Performed basic data entry tasks. <br> (Contracted through Robert Half)</p>
+                            </li>
+                            <li>
+                                <p class="job-title">Temporary Project Resource Clerk</p>
+                                <p class="company">Unlimited Restoration, INC. | URI</p>
+                                <p class="tenure">August 2020 - September 2020</p>
+                                <p class="location">Columbia, MD</p>
+                                <p>Approved and logged the use of resources during a reconstruction project. <br>(Contracted through Robert Half)</p>
+                            </li>
+                            <li>
+                                <p class="job-title">Temporary Engineering Assistant</p>
+                                <p class="company">Yangtze Railroad Materials</p>
+                                <p class="tenure">June 2020 - August 2020</p>
+                                <p class="location">Baltimore, MD</p>
+                                <p>Completed product quality control testing and various administrative tasks.</p>
+                            </li>
+                            <li>
+                                <p class="job-title">Volunteer Data Entry Clerk</p>
+                                <p class="company">Changing Footprints</p>
+                                <p class="tenure">March 2020 - April 2020</p>
+                                <p class="location">Remote</p>
+                                <p>Preserved the contents of organization emails in spreadsheets for record keeping purposes. <br> (Volunteering)</p>
+                            </li>
+                            <li>
+                                <p class="job-title">Temporary File Clerk</p>
+                                <p class="company">Structural Group</p>
+                                <p class="tenure">July 2018 - August 2018</p>
+                                <p class="location">Columbia, MD</p>
+                                <p>Reorganized and archived files. <br> (Contracted through Robert Half)</p>
+                            </li>
+                            <li>
+                                <p class="job-title">Temporary Administrative Assistant</p>
+                                <p class="company">CP Food Products</p>
+                                <p class="tenure">April 2018</p>
+                                <p class="location">Columbia, MD</p>
+                                <p>Performed supply chain management duties using an supply chain management software and other administrative duties as assigned.</p>
+                            </li>
+                            <li>
+                                <p class="job-title">Temporary Store Clerk</p>
+                                <p class="company">Weis</p>
+                                <p class="tenure">November 2017 - March 2018</p>
+                                <p class="location">Elkridge, MD</p> 
+                                <p>Provided customer service and managed items on the shelves.</p>
+                            </li>
+                            <li>
+                                <p class="job-title">Temporary Customer Service Rep</p>
+                                <p class="company">Lowes</p>
+                                <p class="tenure">March 2017 - September 2017</p>
+                                <p class="location">Elkridge, MD</p>
+                                <p>Provided customr service and maintained the merchandise in the gardening department.</p>
+                            </li>-->
+                        </ul>
+                        <a>Add items</a>
+                    </div>
+                    <h3>Other Long Term Work Experience</h3>
+                    <div>
+                        <ul id="other">
+                            <!-- {% for item in items %}
+                                <li>{{ item }}</li>
+                            {% endfor %}  -->
+                            <!-- <li>
+                                <p class="job-title">Freelance English Tutor</p>
+                                <p class="company">Self Employed</p>
+                                <p class="tenure">March 2014 - February 2017</p>
+                                <p class="location">Kaohsiung, TW</p>
+                                <p>Built client base via online services. Assessed client skills and matched with appropriate learning program. Developed successful business while delivering empathetic and motivating teaching to students.</p>
+                            </li>
+                            <li>
+                                <p class="job-title">English Teacher</p>
+                                <p class="company">Golden Branch Cram School</p>
+                                <p class="tenure">June 2015 - August 2016</p>
+                                <p class="location">Kaohsiung, TW</p>
+                                <p>Taught English as a second language to Taiwanese elementary school students.</p>
+                            </li> -->
+                        </ul>
+                        <a>Add items</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <h2>Education</h2>
+            <div>
+                <div id="education-nested">
+                    <h3>Degree Programs</h3>
+                    <div>
+                        <ul>
+                            <!-- {% for item in items %}
+                                <li>{{ item }}</li>
+                            {% endfor %}  -->
+                        </ul>
+                        <a>Add items</a>
+                    </div>
+                    <h3>Certificate Programs</h3>
+                    <div>
+                        <ul>
+                            {% for item in items %}
+                                <li>{{ item }}</li>
+                            {% endfor %} 
+                        </ul>                            
+                        <a>Add items</a>
+                    </div>
+
+                </div>
+            </div>
+            <h2>Links</h2>
+            <div>
+                <ul id="links">
+                    <!-- {% for item in items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}  -->
+                    <!-- <li><a href="https://www.linkedin.com/in/ryan-giannamore-0856b4137/">Linkedin</a></li>
+                    <li><a href="https://github.com/Rgiannamore91">Github</a></li> -->
+                </ul>
+                <a>Add items</a>
+            </div>
+            <h2>Certificates</h2>
+            <div>
+                <ul id="certificates">
+                    <!-- {% for item in items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}  -->
+                    <!-- <li><a href="https://www.codecademy.com/profiles/design6614783675/certificates/d0391bd094f74ff6b770cbc03956b844">Learn Flask: Fundamentals Course (Codecademy)</a><li> -->
+                </ul>
+                <a>Add items</a>
+            </div>
+            <h2>Portfolio</h2>
+            <div>
+                <ul id="portfolio">
+                    <!-- {% for item in items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}  -->
+                </ul>
+                <a>Add items</a>
+            </div>
+        </div>
+
+    </main>
+    <script src="{{ url_for('static', filename='ResumeHome.js') }}"></script>
+{% endblock %}
